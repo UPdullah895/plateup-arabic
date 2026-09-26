@@ -54,7 +54,15 @@
 
 في ويندوز: شغّل `install-windows.bat` واضغط **إزالة**.
 
-في لينكس: `./install.sh --uninstall`
+وفي لينكس:
+
+</div>
+
+```bash
+./install.sh --uninstall
+```
+
+<div dir="rtl">
 
 ## ما ينبغي معرفته
 
