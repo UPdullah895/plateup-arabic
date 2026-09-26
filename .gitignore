@@ -1,0 +1,20 @@
+# Build output and the release archives
+build/
+dist/
+src/PlateUpArabic/bin/
+src/PlateUpArabic/obj/
+
+# The Python environment the tools run in
+venv/
+
+# Decompiled game assemblies, kept locally for reference only. These are the developers'
+# code and are not ours to publish.
+work/
+
+# What the mod writes beside itself while the game is running
+dump/
+arabic.log
+
+# Python bytecode
+__pycache__/
+*.pyc

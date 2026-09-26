@@ -1,0 +1,10 @@
+{
+  "_comment": "Labels typed straight into a scene instead of going through the game's localisation, so they have no key and are matched on their exact English text (trimmed). The mod lists every one it finds in dump/scene-text.json; the ones left out of here are placeholders the game overwrites at runtime with a localised string ('Text Here', 'USERNAME', the mod-failure template) or a brand name. Wording is kept in step with lang/ui.json so the same control reads the same everywhere.",
+
+  "Press any button": "اضغط أي زر",
+  "Paused": "متوقّفة",
+  "Grab": "إمساك",
+  "Interact": "تفاعل",
+  "Controls": "عناصر التحكم\n",
+  "Join our Discord to keep up to date with the game. Press this button to open Discord.": "انضم إلى Discord لتبقى على اطلاع بجديد اللعبة. اضغط هذا الزر لفتح Discord."
+}

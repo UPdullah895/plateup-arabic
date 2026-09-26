@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>PlateUpArabic</AssemblyName>
+    <RootNamespace>PlateUpArabic</RootNamespace>
+    <LangVersion>9</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+    <DebugType>none</DebugType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GameManaged>/home/updullah/.local/share/Steam/steamapps/common/PlateUp/PlateUp/PlateUp_Data/Managed</GameManaged>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="UnityEngine">        <HintPath>$(GameManaged)/UnityEngine.dll</HintPath></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(GameManaged)/UnityEngine.CoreModule.dll</HintPath></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(GameManaged)/UnityEngine.TextRenderingModule.dll</HintPath></Reference>
+    <Reference Include="UnityEngine.TextCoreModule"><HintPath>$(GameManaged)/UnityEngine.TextCoreModule.dll</HintPath></Reference>
+    <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(GameManaged)/UnityEngine.IMGUIModule.dll</HintPath></Reference>
+    <Reference Include="Unity.TextMeshPro">  <HintPath>$(GameManaged)/Unity.TextMeshPro.dll</HintPath></Reference>
+    <!-- TMP_Text derives from MaskableGraphic, so reading one needs uGUI too. -->
+    <Reference Include="UnityEngine.UI">     <HintPath>$(GameManaged)/UnityEngine.UI.dll</HintPath></Reference>
+    <Reference Include="Unity.Entities">     <HintPath>$(GameManaged)/Unity.Entities.dll</HintPath></Reference>
+    <Reference Include="Unity.Collections">  <HintPath>$(GameManaged)/Unity.Collections.dll</HintPath></Reference>
+    <Reference Include="Unity.Mathematics">  <HintPath>$(GameManaged)/Unity.Mathematics.dll</HintPath></Reference>
+    <Reference Include="KitchenMods">        <HintPath>$(GameManaged)/KitchenMods.dll</HintPath></Reference>
+    <Reference Include="Kitchen.GameData">   <HintPath>$(GameManaged)/Kitchen.GameData.dll</HintPath></Reference>
+    <Reference Include="Kitchen.Common">     <HintPath>$(GameManaged)/Kitchen.Common.dll</HintPath></Reference>
+    <Reference Include="Sirenix.Serialization"><HintPath>$(GameManaged)/Sirenix.Serialization.dll</HintPath></Reference>
+    <Reference Include="Newtonsoft.Json">    <HintPath>$(GameManaged)/Newtonsoft.Json.dll</HintPath></Reference>
+  </ItemGroup>
+
+</Project>

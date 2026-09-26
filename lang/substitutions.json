@@ -1,0 +1,9 @@
+{
+  "_comment": "Words the game splices into strings from StringSubstitution assets instead of the localisation, so they are English in every shipped language. Keys are the game's own substitution keys; values keep the surrounding markup exactly and only translate the words.",
+
+  "[thinking]": "<color=#7777ff>التفكير</color>",
+  "[ordering]": "<color=#7777ff>الطلب</color>",
+  "[food]": "<color=#7777ff>الطعام</color>",
+  "[delivery]": "<color=#7777ff>التقديم</color>",
+  "[range]": "<color=#464087><size=-80>المدى:</size></color>"
+}

@@ -1,0 +1,4 @@
+# What the build tools need. The mod itself needs none of this; it is only for turning
+# lang/*.json into the files the game reads.
+arabic-reshaper==3.0.1   # the joining table in visual.py, not its reshaper
+fonttools==4.66.0        # reading each font's cmap in coverage.py

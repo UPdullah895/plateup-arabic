@@ -1,0 +1,13 @@
+{
+  "_comment": "Which Arabic face backs each font PlateUp! substitutes per locale. The game uses a heavy rounded display face for menus, titles and in-world signage, and plainer faces for body copy, so the Arabic follows the same split. '*' backs anything not named here, including the CJK faces other locales use.",
+
+  "English - Main Menu Main Text": "Lalezar-Regular.ttf",
+  "English - Title Text": "Lalezar-Regular.ttf",
+  "English - Large Text": "Lalezar-Regular.ttf",
+  "Font - Cake N Truffles": "Lalezar-Regular.ttf",
+
+  "English - Primary Text": "NotoSansArabic-Black.ttf",
+  "Font - HelvetiHand": "NotoSansArabic-Black.ttf",
+
+  "*": "NotoSansArabic-Black.ttf"
+}
