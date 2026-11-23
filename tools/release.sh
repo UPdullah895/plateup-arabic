@@ -13,7 +13,19 @@ rm -rf "$OUT"
 mkdir -p "$OUT"
 "$HERE/tools/stage.sh" "$OUT/PlateUpArabic"
 
-cp "$HERE/install.sh" "$HERE/install-windows.bat" "$HERE/install-windows.ps1" "$OUT/"
+cp "$HERE/install.sh" "$OUT/"
+# Normalise the Windows launchers to CRLF instead of trusting the working tree: a
+# checkout made before .gitattributes existed still has them LF, and cmd.exe
+# mis-parses parenthesised blocks written that way.
+python3 - "$HERE" "$OUT" <<'PY'
+import sys
+from pathlib import Path
+
+here, out = Path(sys.argv[1]), Path(sys.argv[2])
+for name in ("install-windows.bat", "install-windows.ps1"):
+    data = (here / name).read_bytes().replace(b"\r\n", b"\n").replace(b"\n", b"\r\n")
+    (out / name).write_bytes(data)
+PY
 cp "$HERE/packaging/README.txt" "$OUT/README.txt"
 cp "$HERE/LICENSE" "$OUT/LICENSE.txt"
 mkdir -p "$OUT/licences"
@@ -32,3 +44,7 @@ with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as z:
             z.write(path, Path(root.name) / path.relative_to(root))
 print(f"{archive} ({archive.stat().st_size // 1024} KiB)")
 PY
+
+# A checksum next to the zip, so a player can tell a truncated download from a
+# broken install before running anything, and the release page can quote it.
+( cd "$HERE/dist" && sha256sum "$NAME.zip" > "$NAME.zip.sha256" && cat "$NAME.zip.sha256" )
