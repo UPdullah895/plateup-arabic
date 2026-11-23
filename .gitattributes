@@ -1,0 +1,13 @@
+# Line endings: the Windows launchers are CRLF because cmd.exe mis-parses
+# parenthesised blocks written with bare LF, and the shell installer is LF so
+# it runs straight after a clone on Linux and the Deck.
+*.bat  text eol=crlf
+*.ps1  text eol=crlf
+*.sh   text eol=lf
+*.py   text eol=lf
+
+# Never touch binaries.
+*.exe  binary
+*.dll  binary
+*.ttf  binary
+*.png  binary
